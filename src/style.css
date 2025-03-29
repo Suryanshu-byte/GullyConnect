@@ -31,6 +31,11 @@ html, body{
     width: 100%;
 }
 
+body{
+    overflow-x: hidden;
+    overflow-y: scroll hidden;
+}
+
 #cursor{
     width: 2.3vw;
     height: 2.3vw;
@@ -43,6 +48,7 @@ html, body{
     transform: translate(-50%, -50%);
     pointer-events: none; /* Prevents interaction with elements */
 }
+
 
 #loader {
     height: 100%;
@@ -179,8 +185,155 @@ html, body{
     font-weight: 500;
 }
 
-#page2{
-    height: 100vh;
+#page2{ 
+    min-height: 100vh;
     width: 100%;
     background-color: #2b2b2b;
+    position: relative;
+}
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: #2b2b2b; */
+    position: relative;
+    padding-top: 7vh 0;
+}
+
+#page3-content{
+    width: 72vw;
+    position: relative;
+    margin-left: 28%;
+}
+
+#page3-content h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+}
+
+#page3-content .underline{
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    margin: 5vw 0;
+}
+
+#page3-content>p{
+    font-size: 2vw;
+    width:50%;
+    margin-bottom: 3vw;
+}
+
+#page3-flex{
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+#page3-flex img{
+    width: 48%;
+}
+
+#page3-flex p{
+    font-size: 0.9vw;
+    width: 20%;
+}
+
+#page3-blue-div{
+    background-color: #3F7DF4;
+    width: 33vw;
+    padding: 4vw 3vw;
+    position: relative;
+    margin-top: -35vh;
+    margin-left:26vw ;
+}
+
+.blue-div-elem{
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* background-color: red; */
+    padding: 1.7vw 0;
+    border-bottom: 2px solid #ffffffdb;
+}
+
+.blue-div-elem h4{
+    font-size: 1.4vw;
+    font-weight: 500;
+}
+.blue-div-elem p{
+    width: 40%;
+    font-size: 1vw;
+}
+
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    padding:5vw 0 ;
+    position: relative;
+}
+
+.elem{
+    /* background-color: aqua; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-bottom: -2vw;
+}
+
+.elem h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px  #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: anime2;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anime2{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+.elem2{
+    /* background-color: aqua; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-bottom: -2vw;
+}
+
+.elem2 h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px  #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    transform: translateX(calc(-100% - 20px));
+    animation-name: anime2;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite ;
+    animation-direction: reverse;
+}
+
+.elem span{
+    font-style: italic;
+    font-family: "silkserif-regular";
+    color: transparent;
+}
+.elem2 span{
+    font-style: italic;
+    font-family: "silkserif-regular";
+    color: transparent;
 }
