@@ -1,5 +1,5 @@
+// Import GSAP and ScrollTrigger
 import gsap from "gsap";
-
 
 function loadingAnimation(){
     // typical import
@@ -39,7 +39,7 @@ tl.to("#loader", {
     delay: 4,
 }) 
 
-tl.from("page-1",{
+tl.from("page1",{
     delay: 0.2,
     y:1600,
     opacity:0.6,
@@ -54,15 +54,16 @@ tl.to("#loader",{
 });
 tl.from("#nav",{
     opacity: 0,
-})
+});
 tl.from(".meow h1 ",{
     y:120,
     stagger: 0.2
-})
-}
+});
+tl.from("#meow01, #page2",{
+    opacity:0,
+},"-=1.2");
+}   
 loadingAnimation()
-
-
 
 function cursoranimation(){
     // document.addEventListener("mousemove", function(dets){
